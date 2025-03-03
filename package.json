@@ -1,12 +1,4 @@
 {
-  "name": "eslint-config",
-  "version": "0.0.0",
-  "type": "module",
-  "exports": {
-    ".": {
-      "import": "./eslint.config.mjs"
-    }
-  },
   "devDependencies": {
     "@stylistic/eslint-plugin": "^4.1.0",
     "eslint-import-resolver-typescript": "^3.7.0",
