@@ -47,6 +47,7 @@ export default tseslint.config(
                 before: true,
                 after: true,
             }],
+            /*
             "@stylistic/lines-around-comment": [alertStyle, {
                 beforeLineComment: true,
 
@@ -61,13 +62,17 @@ export default tseslint.config(
                 allowInterfaceStart: true,
                 allowTypeStart: true,
             }],
+            */
             "@stylistic/lines-between-class-members": [alertStyle, {
                 enforce: [
+                    // I love the blank line for each category fields
+                    /*
                     {
                         blankLine: "never",
                         prev: "field",
                         next: "field",
                     },
+                    */
                     {
                         blankLine: "always",
                         prev: "method",
@@ -87,7 +92,7 @@ export default tseslint.config(
                 multilineDetection: "brackets",
             }],
             "@stylistic/no-extra-semi": alertStyle,
-            "@stylistic/object-property-newline": [alertStyle, { allowAllPropertiesOnSameLine: false }],
+            "@stylistic/object-property-newline": [alertStyle, { allowAllPropertiesOnSameLine: true }],
             "@stylistic/padding-line-between-statements": [
                 alertStyle,
 
@@ -102,19 +107,22 @@ export default tseslint.config(
                     prev: "*",
                     next: "function",
                 },
+                // Gonna disable this for post-process IFs
+                /*
                 {
                     blankLine: "always",
                     prev: "*",
                     next: "if",
                 },
+                */
                 {
                     blankLine: "always",
                     prev: "*",
                     next: "block",
                 },
             ],
-            "@stylistic/quote-props": [alertStyle, "as-needed"],
-            "@stylistic/quotes": [alertStyle, "double"],
+            // "@stylistic/quote-props": [alertStyle, "as-needed"],
+            "@stylistic/quotes": "off",
             "@stylistic/semi": alertStyle,
             "@stylistic/space-before-blocks": alertStyle,
             "@stylistic/space-before-function-paren": [alertStyle, {
