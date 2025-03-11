@@ -4,7 +4,7 @@ import tseslint from "typescript-eslint";
 import stylistic from "@stylistic/eslint-plugin";
 import importPlugin from "eslint-plugin-import";
 
-const alertStyle = "warn";
+const ALERT_STYLE = "warn";
 
 export default tseslint.config(
     { files: ["**/*.{ts,tsx}"] },
@@ -17,7 +17,6 @@ export default tseslint.config(
             globals: {
                 ...globals.browser,
                 ...globals.node,
-                ...globals.devtools,
             },
             parser: tseslint.parser,
             parserOptions: {
@@ -34,16 +33,16 @@ export default tseslint.config(
         rules: {
             // Lints
             "no-unused-vars": "off",
-            "tsdoc/syntax": alertStyle,
+            "tsdoc/syntax": ALERT_STYLE,
 
             // Formats
-            "@stylistic/indent": [alertStyle, 4],
-            "@stylistic/block-spacing": alertStyle,
-            "@stylistic/brace-style": [alertStyle, "1tbs", { allowSingleLine: true }],
-            "@stylistic/function-call-spacing": [alertStyle, "never"],
-            "@stylistic/comma-dangle": [alertStyle, "always-multiline"],
-            "@stylistic/key-spacing": [alertStyle, { beforeColon: false }],
-            "@stylistic/keyword-spacing": [alertStyle, {
+            "@stylistic/indent": [ALERT_STYLE, 4],
+            "@stylistic/block-spacing": ALERT_STYLE,
+            "@stylistic/brace-style": [ALERT_STYLE, "1tbs", { allowSingleLine: true }],
+            "@stylistic/function-call-spacing": [ALERT_STYLE, "never"],
+            "@stylistic/comma-dangle": [ALERT_STYLE, "always-multiline"],
+            "@stylistic/key-spacing": [ALERT_STYLE, { beforeColon: false }],
+            "@stylistic/keyword-spacing": [ALERT_STYLE, {
                 before: true,
                 after: true,
             }],
@@ -63,7 +62,7 @@ export default tseslint.config(
                 allowTypeStart: true,
             }],
             */
-            "@stylistic/lines-between-class-members": [alertStyle, {
+            "@stylistic/lines-between-class-members": [ALERT_STYLE, {
                 enforce: [
                     // I love the blank line for each category fields
                     /*
@@ -80,7 +79,7 @@ export default tseslint.config(
                     },
                 ],
             }],
-            "@stylistic/member-delimiter-style": [alertStyle, {
+            "@stylistic/member-delimiter-style": [ALERT_STYLE, {
                 multiline: {
                     delimiter: "semi",
                     requireLast: true,
@@ -91,10 +90,10 @@ export default tseslint.config(
                 },
                 multilineDetection: "brackets",
             }],
-            "@stylistic/no-extra-semi": alertStyle,
-            "@stylistic/object-property-newline": [alertStyle, { allowAllPropertiesOnSameLine: true }],
+            "@stylistic/no-extra-semi": ALERT_STYLE,
+            "@stylistic/object-property-newline": [ALERT_STYLE, { allowAllPropertiesOnSameLine: true }],
             "@stylistic/padding-line-between-statements": [
-                alertStyle,
+                ALERT_STYLE,
 
                 // TODO: add style for TS blocks
                 {
@@ -123,15 +122,15 @@ export default tseslint.config(
             ],
             // "@stylistic/quote-props": [alertStyle, "as-needed"],
             "@stylistic/quotes": "off",
-            "@stylistic/semi": alertStyle,
-            "@stylistic/space-before-blocks": alertStyle,
-            "@stylistic/space-before-function-paren": [alertStyle, {
+            "@stylistic/semi": ALERT_STYLE,
+            "@stylistic/space-before-blocks": ALERT_STYLE,
+            "@stylistic/space-before-function-paren": [ALERT_STYLE, {
                 named: "never",
                 anonymous: "always",
                 asyncArrow: "always",
             }],
-            "@stylistic/space-infix-ops": alertStyle,
-            "@stylistic/type-annotation-spacing": alertStyle,
+            "@stylistic/space-infix-ops": ALERT_STYLE,
+            "@stylistic/type-annotation-spacing": ALERT_STYLE,
         },
         settings: {
             "import/resolver": {
