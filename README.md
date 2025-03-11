@@ -1,1 +1,1 @@
-note: just add dependencies and `eslint.config.mjs` to project
+note: just add dependencies and other files to project
