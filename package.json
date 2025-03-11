@@ -1,23 +1,10 @@
 {
-    "compilerOptions": {
-        "lib": [
-            "ESNext",
-            "DOM",
-            "DOM.Iterable",
-        ],
-        "module": "NodeNext",
-        "target": "ESNext",
-        "strict": true,
-        "esModuleInterop": true,
-        "moduleResolution": "NodeNext",
-        "skipLibCheck": true,
-        "noImplicitAny": false,
-        "strictNullChecks": false
-    },
-    "include": [
-        "Sources/**/*",
-        "Playground/**/*",
-        "eslint.config.mjs",
-        "esbuild.mjs",
-    ]
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^4.1.0",
+    "eslint-import-resolver-typescript": "^3.7.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-tsdoc": "^0.4.0",
+    "globals": "^15.13.0",
+    "typescript-eslint": "^8.18.0"
+  }
 }
