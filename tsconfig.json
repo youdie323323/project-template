@@ -12,7 +12,11 @@
     "moduleResolution": "NodeNext",
     "skipLibCheck": true,
     "noImplicitAny": false,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "useDefineForClassFields": false,
+    "forceConsistentCasingInFileNames": false,
+    "resolveJsonModule": true,
+    "resolvePackageJsonExports": false,
   },
   "include": [
     "Sources/**/*",
